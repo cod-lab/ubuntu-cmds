@@ -1,0 +1,91 @@
+for changing permission -->
+	sudo chown -R $USER:$USER /var/www/html
+	sudo chmod -R 755 /var/www
+
+del directory = rm dir_name
+del directory with its folders = rm -r dir_name
+move directory and all its files = mv source_folder_name destination_folder_name (if destination exist it'll move dir)
+rename file = mv old_name new_name (if new name doesn't exist it'll rename dir)
+
+open VS Code with webmodules folder = code /var/www/html/webmodules 
+open pwd in vs code = code . (if terminal in pwd)
+
+nvidia control panel = nvidia-settings
+check graphic card in use = prime-select query
+
+check linux version = lsb_release -a
+
+restart apache = systemctl restart apache2
+check ip & ports = netstat -tlnp
+
+update system
+	sudo apt-get update OR sudo apt update = Get updated softwares list
+	sudo apt-get upgrade OR sudo apt upgrade = UPDATE SOFTWARE(S) i.e. APPLY UPDATES AND PATCHES
+
+update single package
+	sudo apt-get update
+	sudo apt-get --only-upgrade install <Package name>
+	sudo apt-get install <Package name>
+
+install software = sudo apt-get install <software name>
+
+install through local file(downloaded file) = sudo dpkg -i <loc/filename>
+	
+install kernel updates
+	sudo apt-get dist-upgrade
+	sudo reboot = restart system (only if there is kernel update)
+
+list all the installed packages =	dpkg -l OR cat /var/log/dpkg.log
+check specific package = dpkg -l | grep <Package name>
+list all the files installed by a package =	dpkg -L <Package name>
+check which package installed a specific file = dpkg -S <loc/filename>
+=======================================================================================================================================================================================
+Snapd -->
+install snapd(snap manager) = sudo apt install snapd
+install snap(package) = sudo snap install <snap name>
+list all available(not downloaded) featured snaps = snap find
+list all available(not downloaded) prescribed snaps = snap find <query/type of snapes> ->
+	eg.
+		snap find editor = list all code editors available
+		or 
+		snap find media = list all media editors available
+list all installed snaps = snap list
+update all snaps = snap refresh
+remove/uninstall snap(package) = sudo snap remove <snap name>
+remove unnecessary packages after update = sudo apt autoremove
+detail about a snap = snap info <snap name>install
+=======================================================================================================================================================================================
+Ubuntu Make -->
+Installing Ubuntu Make
+You can install the snap package (not working at the moment on 17.10)
+
+ $ snap install ubuntu-make
+If you run the snap you have to run ubuntu-make.umake
+
+If you're running 17.10 or want to run the "traditional" package, you can install from the Ubuntu Make PPA. First, add the PPA to your system:
+
+ $ sudo add-apt-repository ppa:lyzardking/ubuntu-make
+ $ sudo apt-get update
+Then, installing Ubuntu Make:
+
+ $ sudo apt-get install ubuntu-make
+
+install Pycharm Community Edition with umake
+	sudo umake ide pycharm
+
+Remove Pycharm with umake
+	sudo umake ide pycharm --remove
+=======================================================================================================================================================================================
+install pip = sudo apt install python3-pip
+update pip = pip3 install -U pip
+
+install virtual environment "pipenv" = sudo -H pip install -U pipenv
+opening the environment = pipenv shell
+=======================================================================================================================================================================================
+move one directory up or get out of a folder = cd ..
+create file through git = touch <filename>
+display content of a file to terminal = cat <loc/filename>
+open file to edit = gedit <loc/filename>
+open file in terminal to edit = nano <loc/filename>
+copy content of a file to clipboard = install xclip xsel
+=======================================================================================================================================================================================
