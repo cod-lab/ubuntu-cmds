@@ -7,6 +7,8 @@ del directory with its folders = rm -r dir_name
 move directory and all its files = mv source_folder_name destination_folder_name (if destination exist it'll move dir)
 rename file = mv old_name new_name (if new name doesn't exist it'll rename dir)
 
+list(see) all files(hidden also) of a dir = ls -a
+
 open VS Code with webmodules folder = code /var/www/html/webmodules 
 open pwd in vs code = code . (if terminal in pwd)
 
@@ -88,4 +90,33 @@ display content of a file to terminal = cat <loc/filename>
 open file to edit = gedit <loc/filename>
 open file in terminal to edit = nano <loc/filename>
 copy content of a file to clipboard = install xclip xsel
+=======================================================================================================================================================================================
+nodejs -->
+LTS ver 12.x from nodejs.org -
+-- before installing node --
+install curl first = sudo apt-get install curl
+install some python files if not installed already = sudo apt-get install python-software-properties
+-- now --
+curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
+sudo apt-get install -y nodejs
+
+upgrade to the latest version of npm = npm install -g npm@latest
+upgrade to the most recent release = npm install -g npm@next
+=======================================================================================================================================================================================
+VMware -->
+install vm ware tools for headless systems =
+	sudo apt update
+	sudo apt install open-vm-tools
+install vm ware tools for desktop systems =
+	sudo apt update
+	sudo apt install open-vm-tools-desktop
+update vm ware for new ver release = sudo apt update && sudo apt upgrade
+
+uninstall vm ware tools(unistall both headless & desktop system tools) =
+	sudo apt-get remove open-vm-tools
+		sudo vmware-install-tools.pl
+uninstall vm ware tools(unistall both headless & desktop system tools) and its dependencies= 
+	sudo apt-get remove --auto-remove open-vm-tools
+=======================================================================================================================================================================================
+
 =======================================================================================================================================================================================
